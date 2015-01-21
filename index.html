@@ -1,10 +1,806 @@
-  <head>
-     <title>BambuSoft.com</title>
-     <meta http-equiv="refresh" content="10;url=http://www.bambusoft.com">
-  </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>sentora-paranoid</title>
+
+<meta name="author" content="Mario Rodriguez" />
+<meta name="copyright" content="Copyright 2005-2015 Mario Rodriguez, All Rights Reserved" />
+<meta name="keywords" content="sentora,sentora-paranoid,security" lang="en" />
+<style type="text/css" id="internalStyle">
+body { background: white; color: black }
+kbd { font-family: monospace; background-color: #eeeeee }
+pre.kbd { background-color: #eeeeee }
+img.noboarder { color: white; border: none }
+</style><!-- tt { background-color: #eeffff } --><!-- [link rel="STYLESHEET" href="./a.css" type="text/css"] -->
+</head>
 <body>
-	<div style="text-align: center;">
-		<a href="http://www.bambusoft.com"><img src="/images/underconstruction.jpg" border="0"></a><br>
-		Para informaci&oacute;n relacionada con este sitio por favor visite: <a href="http://www.bambusoft.com">www.bambusoft.com</a>
-	</div>
-</body>
+<p>
+[ <a href="./index.html">home site</a> | <a href="#download">download</a> | <a href="#doc">documentation</a>
+| <a href="#support">support</a> ]
+</p>
+<h1>sentora-paranoid</h1>
+<p><b>sentora-paranoid</b> is a usefull script
+designed for
+those who are very concerned about <a href="http://www.sentora.org">sentora
+project</a>
+security and want to enable basic security for an
+operational environment.</p>
+<p>The oficial web page of this project is: <a href="http://sentora-paranoid.open-source.tk">http://sentora-paranoid.open-source.tk</a>
+</p>
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#new">News</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#doc">Documentation</a></li>
+<li><a href="#support">Support</a></li>
+<li><a href="#features">Features</a>
+<ul>
+</ul>
+</li>
+<li><a href="#faq">Tips
+and FAQ</a>
+<ul>
+<li><a href="#faq-trouble">troubleshooting
+and reporting problems</a></li>
+<li><a href="#faq-gen">general</a></li>
+</ul>
+</li>
+<li><a href="#sec">Security
+considerations</a>
+<ul>
+<li><a href="#sec-host">Security
+considerations for the host running <i>sentora-paranoid</i></a></li>
+<li><a href="#sec-mua">Security
+considerations for mail clients being protected</a></li>
+<li><a href="#sec-dos">Protection
+against denial-of-service (DoS) attacks</a></li>
+</ul>
+</li>
+</ul>
+<h2><a id="intro" name="intro">Introduction</a></h2>
+<p>sentora-paranoid is a complementary script to bring basic
+security beyond the default security considerations in the original
+sentora project, this script is executed <span style="font-style: italic;">AFTER</span>
+the official sentora_installer script and <span style="font-style: italic;">BEFORE</span> any other
+package in your hosting server to install basic security packages, all
+of them needed for a more secured hosting server environment.
+</p>
+<p>All modifications since the original <span style="font-style: italic;">sentora-paranoid</span>
+done by
+<a href="http://mario.rodriguez.somohano.mx">Mario
+Rodríguez Somohano</a> ,
+with
+contribution of ideas, patches and reports from the <i>sentora </i>and<i>
+sentora-paranoid</i> community
+and individuals.</p>
+<p>If you wish to participate with this project you can help with
+this:</p>
+<ul>
+<li>Website translation</li>
+<li>Packages configuration improvements</li>
+<li>Tests and report results</li>
+<li>sentora security module (to fully integrate to sentora
+project)</li>
+<li>Write how-tos and tutorials</li>
+<li>Expand installation script to other OSes</li>
+</ul>
+<h2><a id="new" name="new">News</a></h2>
+<p>2015-01-13:&nbsp;Current under development and&nbsp;
+unestable release <a href="installers/1.0.0-150113">sentora-paranoid-1.0.0-150113</a></p>
+<p><b>Old News</b></p>
+<p>2014-12-20: First&nbsp;beta code and tests released for a
+very few users<br />
+</p>
+<p><br />
+</p>
+<h2>Security warning</h2>
+<p>The <i>sentora-paranoid</i> uses several external
+programs and modules
+for its operation. If there are security vulnerabilities in them,
+some parts of the setup might be affected. The possible damage is
+limited
+to what a non-privileged UID can accomplish in normal setups.
+</p>
+<p>It is always a good idea to use fairly recent versions of
+external
+programs and external modules.</p>
+<dl>
+</dl>
+<p><br />
+</p>
+<h2><a id="download" name="download">Download</a></h2>
+<dl>
+<dt>Before downloading please consider donating, the project
+relies on the kind donations from our users!</dt>
+</dl>
+<dl>
+<dt><b>Home web site</b>
+in <a href="http://sentora-paranoid.open-source.tk">Guadalajara,
+Jalisco, México</a>
+(thanks to <a href="http://www.bambusoft.com">Bambusoft</a>):</dt>
+<dd>=&gt;&nbsp;<a href="installers/1.0.0-150113">sentora-paranoid-1.0.0-150113</a>
+unestable</dd>
+<dt></dt>
+</dl>
+<h3>Latest development release</h3>
+<dl>
+Please be aware that development snapshots should only be
+used for
+development and testing purposes, they are not recommended for
+production environments!<br />
+<dd>=&gt;&nbsp;<a href="https://github.com/bambusoft/sentora-paranoid">sentora-paranoid-1.0.0</a>
+at github</dd>
+<dt></dt>
+</dl>
+<dl>
+</dl>
+<h3>Most recent versions</h3>
+<dl>
+<dt><a href="installers/1.0.0-150113">sentora-paranoid-1.0.0-150113</a>
+&nbsp;Most recent unstable release</dt>
+</dl>
+<p><b>Announcements</b> about new releases, they are
+posted in the sentora-paranid official page and <a href="http://forum.sentora-paranoid.open-source.tk">forum</a><span style="text-decoration: underline;"></span><br />
+</p>
+<hr />
+<h3>sentora-paranoid installed packages<span style="color: red;"></span></h3>
+<p>There are some packaged versions available, provided and
+supported
+only by their respective authors/maintainers. Some are recent and
+updated frequently, others are pretty much out of date.</p>
+<table style="text-align: left; width: 1093px; height: 60px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td><span style="font-weight: bold;">Package</span></td>
+<td><span style="font-weight: bold;">Version</span></td>
+<td><span style="font-weight: bold;">Description</span></td>
+</tr>
+<tr>
+<td>tree</td>
+<td>1.6.0-1</td>
+<td>Displays directory tree to check original and final
+file permissions</td>
+</tr>
+<tr>
+<td>iptables</td>
+<td>1.24.1-1</td>
+<td>Administration tools for packet filtering and NAT
+(Firewall functions)</td>
+</tr>
+<tr>
+<td>iptables-persistent</td>
+<td>0.5.7</td>
+<td>Boot-time loader for iptables rules</td>
+</tr>
+<tr>
+<td>openssl</td>
+<td>1.0.1f-1</td>
+<td>Secure Sockets Layer toolkit - cryptographic utility</td>
+</tr>
+<tr>
+<td>fail2ban</td>
+<td>0.8.11-1</td>
+<td>Ban hosts that cause multiple rule based authentication
+errors</td>
+</tr>
+<tr>
+<td>apparmor</td>
+<td>2.8.95~2430-0</td>
+<td>User-space parser utility for AppArmor (Mandatory
+Access Control (MAC) system which is a kernel (LSM) enhancement to
+confine programs to a limited set of resources)</td>
+</tr>
+<tr>
+<td>apparmor-utils</td>
+<td>2.8.95~2430-0</td>
+<td>Utilities for controlling AppArmor</td>
+</tr>
+<tr>
+<td>libapache2-mod-apparmor</td>
+<td>2.8.95~2430-0</td>
+<td>Changehat AppArmor library as an Apache module to
+confine vhost scripts</td>
+</tr>
+<tr>
+<td>ipset</td>
+<td>6.20.1-1</td>
+<td>Administration tool for kernel IP sets (hash tool to
+block unwanted ips)</td>
+</tr>
+<tr>
+<td>opendkim</td>
+<td>2.9.1-1</td>
+<td>Milter implementation of DomainKeys Identified Mail</td>
+</tr>
+<tr>
+<td>opendkim-tools</td>
+<td>2.9.1-1</td>
+<td>Set of command line tools for OpenDKIM</td>
+</tr>
+<tr>
+<td>amavisd-new</td>
+<td>1:2.7.1-2</td>
+<td>Interface between MTA and virus scanner/content filters</td>
+</tr>
+<tr>
+<td>spamassassin</td>
+<td>3.4.0-1</td>
+<td>Perl-based spam filter using text analysis</td>
+</tr>
+<tr>
+<td>spamc</td>
+<td>3.4.0-1</td>
+<td>Client for SpamAssassin spam filtering daemon</td>
+</tr>
+<tr>
+<td>clamav</td>
+<td>0.98.5</td>
+<td>anti-virus utility for Unix - command-line interface</td>
+</tr>
+<tr>
+<td>clamav-base</td>
+<td>0.98.5</td>
+<td>anti-virus utility for Unix - base package</td>
+</tr>
+<tr>
+<td> libclamav6</td>
+<td>0.98.5</td>
+<td>anti-virus utility for Unix - library</td>
+</tr>
+<tr>
+<td>clamav-daemon</td>
+<td>0.98.5</td>
+<td>anti-virus utility for Unix - scanner daemon</td>
+</tr>
+<tr>
+<td> clamav-freshclam</td>
+<td>0.98.5</td>
+<td>anti-virus utility for Unix - virus database update
+utility</td>
+</tr>
+<tr>
+<td>sp-policyd</td>
+<td>1.0.0</td>
+<td>Postfix send rate limit per user/domain</td>
+</tr>
+<tr>
+<td>libswitch-perl</td>
+<td>2.16-2</td>
+<td>&nbsp;switch statement for Perl</td>
+</tr>
+<tr>
+<td>libnet-dns-perl</td>
+<td>0.68-1.2build1</td>
+<td>Perform DNS queries from a Perl script</td>
+</tr>
+<tr>
+<td>libmail-spf-perl</td>
+<td>2.9.0-2</td>
+<td>Perl implementation of Sender Policy Framework and
+Sender ID</td>
+</tr>
+<tr>
+<td>pyzor</td>
+<td>1:0.5.0-2fakesync1</td>
+<td>spam-catcher using a collaborative filtering network</td>
+</tr>
+<tr>
+<td>razor</td>
+<td>1:2.85-4build2</td>
+<td>spam-catcher using a collaborative filtering network</td>
+</tr>
+<tr>
+<td>-decompressors-</td>
+<td></td>
+<td> arj bzip2 cabextract cpio gzip nomarch pax rar unrar
+unzip zip</td>
+</tr>
+</tbody>
+</table>
+<dl>
+</dl>
+<p>There may be other packaged version around, please let me
+know.
+</p>
+<p>Note that packaged versions may not be based on the
+most recent version of sentora-paranoid.</p>
+<p></p>
+<h2><a id="doc" name="doc">Documentation</a></h2>
+<p>Besides this web page at&nbsp; the following files
+comprise the <i>sentora-paranoid</i>
+documentation.&nbsp;</p>
+<ul>
+<li><a href="doc%5C1.0.0%5Csentora-paranoid.pdf">sentora-paranoid-1.0.0
+installation</a><br />
+</li>
+</ul>
+<ul>
+</ul>
+<ul>
+</ul>
+<h2><a id="support" name="support">Support</a></h2>
+<p>Check <span style="font-style: italic;">sentora</span>
+forums for sentora related support and <a href="http://forum.sentora-paranoid.open-source.tk"><span style="font-style: italic;">sentora-paranoid</span>
+forums</a> for topics related to this script only, be advised
+that sentora
+team does not support or endorse this unofficial sentora project.</p>
+<p>For paid support please contact Mario Rodríguez &lt;
+sentora-paranoid (at) open-source.tk &gt; </p>
+<p>For questions about packaged versions please contact their
+maintainers
+and/or their bug-tracking mechanisms.</p>
+<dl>
+<dd></dd>
+</dl>
+<h2><a id="features" name="features">Features</a></h2>
+<ul>
+<li>written in bash for better
+maintainability, portability, no risk of buffer overruns or
+invalid pointers</li>
+<li>Allows administration delegation (setting proper file
+permissions)</li>
+<li>Adjust apache security configuration</li>
+<li>Disables insecure PHP functions: eval, passthru,
+show_source, shell_exec, system (you can change this manually)</li>
+<li>Hides PHP version and reduces error reporting</li>
+<li>Prevents PHP code injection</li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Ban
+hosts that cause multiple rule based authentication errors</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Administration
+tool for kernel IP sets (hash tool to block unwanted ips with better
+performance)</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">User-space&nbsp;Mandatory
+Access Control (MAC) system enhancement to confine programs to a
+limited set of resources (apparmor) in complain state</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Confine
+vhost scripts via apparmor hats</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Enable
+SFTPd</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Diable
+DNS recursion and hides bind version<br />
+</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Generates
+a temporary CA and server certificates for apache SSL, SFTP and postfix
+(you can override them for real certificates)</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Reject
+mails from invalid/unknown fqdn/hostnames</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Enable
+postfix spam blacklist&nbsp;detection</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Set
+spamers time limits to reduce resources consumption</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">spam-catching
+using a collaborative filtering network</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Use
+TLS with postfix</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Enhance
+dovecot logs to detect authentication failures<br />
+</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Uses
+</span><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">milter
+implementation of DomainKeys Identified Mail (DKIM)</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Interface
+between MTA and virus scanner/content filters
+(amvis-new/clamav/spamassassin)</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Disable
+postfix display of the name of the recipient table in the "User
+unknown" responses</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Set
+postfix send rate limit per user/domain</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Enable
+roundcube authentication error log and disable installer<br />
+</span></li>
+<li>Shows all related daemons status</li>
+<li>Allows MySQL authentication warnings</li>
+<li>Automaticaly switch from UFW to iptables/ip6tables<span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span>for
+packet filtering and NAT (Firewall functions)</span></li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Enhance
+firewall settings openning just required ports for ipv4 and ipv6<br />
+</span></li>
+<li>Allows install revertion to restore original sentora
+project environment (experimental)</li>
+<li>Change default weak file permissions (No more 777 -
+rwxrwxrwx in dangerous places)</li>
+<li>Record before and after file permissions to compare</li>
+<li><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">Boot-time
+loader for iptables rules</span></li>
+</ul>
+<br />
+<h2><a id="faq" name="faq">Tips and FAQ</a></h2>
+<h3><a id="faq-trouble" name="faq-trouble">Tips
+and FAQ -- troubleshooting
+and reporting problems</a></h3>
+<ul>
+<li>Requirements:</li>
+<ul>
+<li>Recent linux Ubuntu 14.04 server installed</li>
+<li>128MB of memory (512+ recomendded)</li>
+<li>Recent sentora installation</li>
+</ul>
+<li>Use the official sentora-paranoid forun to report any
+problem with the security script.</li>
+<li>When&nbsp;reporting a problem, please include all
+relevant
+information. Here is a checklist:
+<ul>
+<li>full sentora_installer and sentora-paranoid versions,
+e.g. <i>sentora-paranoid-1.0.0-150113</i>; version is
+logged at
+startup;<kbd></kbd></li>
+<li>which OS is being used; running <i>chroot</i>-ed?
+version of bash; other information written to the log file at daemon
+startup time is often useful;</li>
+<li>a description of the problem;</li>
+<li>sentora-paranoid log,&nbsp; a syslog file and
+package log. In
+certain cases processing of one message may take several minutes, and
+may be intertwined with log entries from other simultaneously running
+processes. If this is the case, use grep(1) and collect <i>all</i>
+log entries pertaining to the same thread (some possibly much older
+than the rest) and submit <i>only</i> these, e.g. <kbd>egrep
+'\(audit\)' logfile</kbd>;</li>
+<li>if hiding certain information from the log, such as
+e-mail addresses, host names, etc, please do it in such a way as to
+keep relevant information;</li>
+<li><i>don't remove timestamps</i>, at least
+keep minutes and seconds;</li>
+<li>if it looks like the problem is related to
+installation, include snetora-paranoid.log and sentora installer log;</li>
+<li>if a problem appears to be with some package (timeouts,
+configuration problems, some test not working, ...), then run separte
+tests.
+Always check the syntax of the configuration file after making changes
+to it, e.g.: <kbd>su - vscan -c 'spamassassin --lint'</kbd>
+and search for the proper forum from the original package;</li>
+<li>here is a sub-checklist of things to do when
+some&nbsp;child process seems to be burning CPU without noticeable
+progress:
+<ol>
+<li>restart server or all involved daemons with the
+output of ps(1), see which process
+is burning CPU without any obvious progress -- see total elapsed CPU
+time used so far, and current CPU percentage used by each child
+process. Note the PID of the suspect processes(es). These are well know
+resources eaters: freshclam and clamv when installed for the first time
+or in a heavy environments;</li>
+<li>using <kbd>lsof -p <i>pid</i></kbd>,
+see what files the process has open, especially the current temporary
+directory holding the data processed, and its subdirectories. Copy
+interesting files to a safe place so that you do
+not lose evidence if sentora-paranoid or packages happens to time out
+and delete
+them;</li>
+<li>run <kbd>strace -t -p <i>pid</i></kbd>
+(or truss(1)) and try to guess what the process is doing. Is it
+accessing any files? Working on some database? (manually doing a
+Bayes expiry may be beneficial). Is some other virus scanner (e.g.
+SAVI-Perl)
+busily creating temporary files? ...</li>
+<li>kill the process, restart daemons with debug or
+rised log level, and feed it the same file (a copy of<span style="font-style: italic;"> log files</span>)
+that you saved on step 2, e.g.: <kbd>sendmail -i postmaster
+&lt; email.txt</kbd> Does the same thing happen again? This
+time the debug output may show further useful information.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a id="faq-gen" name="faq-gen">Tips and
+FAQ -- general</a></h3>
+<ul>
+<li>
+<p>How to install
+sentora-paranoid:<br />
+</p>
+<pre class="kbd"> &gt; sudo bash &lt;(curl -L -Ss http://sentora-paranoid.opensource.tk/installers/1.0.0-yymmdd/sentora-paranoid.sh)<br /></pre>
+<p> or the long way: </p>
+<pre class="kbd"> # su or sudo -i<br /> &gt; wget http://sentora-paranoid.open-source.tk/installers/1.0.0-yymmdd/sentora-paranoid.sh<br /> &gt; chmod u+x sentora-paranoid.sh<br /> &gt; ./sentora-paranoid.sh<br /></pre>
+<p> just replace: <span style="font-style: italic;">yymmdd</span> with a valid release number </p>
+</li>
+<li>See comand output and log files:
+<pre>sentora-paranoid version: 1.0.0-dev-snapshot<br />sentora-installer version: 1.0.0-RC1<br />sentora-preconf version: 1.0.0-RC1<br />sentora-core version: 1.0.0-RC1&lt;<br /><br />Action requested: install on server: Ubuntu 14.04 32<br />...<br /></pre>
+</li>
+</ul>
+<br />
+<h2><a id="sec" name="sec">Security
+considerations</a></h2>
+<h3><a id="sec-host" name="sec-host">Security
+considerations for the host
+running <i>sentora-paranoid</i></a></h3>
+<p><i>sentora-paranoid</i> uses OS packages
+installer, may
+call
+external modules
+and may fork external programs to decompress and decode message,
+classify
+its content, then the package is installed.
+</p>
+<p>Any component of a program that comes in contact with
+unpredictable
+and possibly malicious mail/document content, must be careful not to
+let
+the content have any uncontrolled effect on the operation of the
+program,
+or its environment.
+</p>
+<p><i>sentora-paranoid</i> is written entirely in
+Bash. This in itself is a strong argument that the
+processing <i>within</i> <i>sentora-paranoid</i>
+(and other modules it calls)
+is not likely to be subject to buffer overruns, stack smashing, and
+other
+problems that are common source of security problems in programs
+written
+in languages like C.
+</p>
+<p>The external packages called by <i>sentora-paranoid</i>
+have not been
+thoroughly screened for possible security implications. They still
+benefit
+from the OS environment but some of them are relatively complex piece
+of software. Some packages that deal with decoding and checking of mail
+contents may
+be
+targets of malicious mail content, especially if they include code
+written
+in C, like decoding and uncompressing libraries, e.g. zlib and
+uulib/uudeview
+(Convert::UUlib).
+</p>
+<p>External programs that get forked from <i>sentora-paranoid</i>
+to perform
+some decoding/uncompressing or classifying task, are the greatest
+potential
+threat to the safe operation of the host running <i>sentora-paranoid</i>.
+Some
+of these programs that are used to decode certain archive formats are
+quite
+complex, are old or poorly maintained, and/or written by less security
+conscious authors. E.g. a vulnerability is present in Unix utility
+<i>file</i>(1) version 3.41 or older. Generally it is
+advised that
+external programs are kept up-to-date and that crashes of such programs
+are reported immediately to their maintainers (after verifying first
+the
+version is recent).
+</p>
+<p>There is a tradeoff in deciding whether to call some external
+decoder:
+calling it may open a vulnerability at the host running <i>sentora-paranoid</i>
+packages;
+not calling it (and not decoding certain types of document) may cause
+virus
+checker to miss a malicious mail contents, increasing danger for the
+mail
+recipient, while reducing risk for the host running checks.
+</p>
+<p>While it may be true that only a powered-down computer, locked
+in a
+basement and disconnected from the network is completely secure
+computer,
+this is not practical to get any job done. Besides choosing a security
+program to be written in bash and using external packages,
+there are other things one may do to reduce security threats to the
+computer running it:
+</p>
+<ul>
+<li>Never leave <i>sentora-paranoid</i> packages
+running as root or
+with
+other elevated privileges if they do not need it.
+Use a dedicated username (UID) and group (GID) for the purpose (for
+example:
+don't use usernames <i>mail</i> or <i>nobody</i>).
+Start <i>packages</i>
+daemon with <i>su</i>(1) (best), or use command line
+options -u (and -g) to
+specify username/group when starting package, or at least specify user
+and group in package configuration . Later versions of <i>sentora-paranoid</i>
+packages perform certain checks on its environment and fail to start up
+if some
+obvious security flaw is found in current UID of the process or in
+ownership
+and protections of the most critical files and directories.</li>
+<li>Protect account under which <i>sentora-paranoid</i>
+packages will run, don't let it
+have a valid password and disallow interactive logins and remote access.</li>
+<li>Check settings for external programs and disable those not
+trusted (or just
+remove them).
+Make sure external programs, their configuration files (e.g.
+/usr/share/magic)
+or directories where they reside, are not writable by a non-privileged
+(non-root) user. Normally such files should be owned by root. This also
+applies to external virus checking programs and their database, and
+external
+programs that may be called by SpamAssassin (if enabled).</li>
+<li>The same applies to configuration files used by <i>sentora-paranoid</i>
+and <i>SpamAssassin</i>, e.g. /etc/amavisd.conf,
+/etc/mail/spamassassin/*,
+/usr/share/spamassassin/* . Most importantly these files should not be
+writable by user (UID or GID) under which <i>common users</i>
+are running,
+they should preferably be owned by root and not (world or
+group)-writable.</li>
+<li>Some directories must be writable for <i>sentora-paranoid</i>
+packages,
+and are
+commonly owned by user and group under which <i>package process</i>
+is running.
+These directories should not be writable by other non-privileged
+users.&nbsp;</li>
+<li>Keep all software up-to-date, especially the external
+decoders
+and virus scanners.</li>
+<li>Do regular backups, keep file system signatures.</li>
+</ul>
+<h3><a id="sec-mua" name="sec-mua">Security
+considerations for mail clients
+being protected</a></h3>
+<p>Running a virus checking and a content filter for each mail
+before
+it reaches
+the mail reader is an important line of defense against virus outbreaks
+and in protecting the (possibly not security conscious) recipients,
+or their mail reader programs or computer environment.
+</p>
+<p>Not all malware is passed by e-mail. Several viruses or worms
+use multiple
+mechanisms to propagate, including WWW, sharing disks or through
+peer-to-peer
+'contents' sharing, social engineering, or even a memory key or a CD
+brought-in in a pocket or distributed by magazines and software
+publishing
+houses may bring in a virus;
+</p>
+<p>Content filtering mailer can not protect internal hosts unless
+incoming
+SMTP (TCP dst port 25) is restricted at the firewall to official
+mailers
+only. Similarly external world deserves protection from possibly
+infected
+internal hosts, so outgoing SMTP (TCP dst port 25 again, outgoing this
+time)
+needs to be restricted to official mailers. (Use standard tcp port 587
+for
+mail submission from roaming users.)
+</p>
+<p>Similarly, if mail readers can fetch mail from external
+mailboxes
+(POP3, IMAP), the SMTP mail gateway can not protect them. One solution
+is to provide a centralized <i>fetchmail</i> service to
+users that need access
+to external mailboxes, and feed such mail to the regular content
+filtering
+mailer, while blocking other unofficial access to external POP3 and
+IMAP
+servers at a firewall.
+</p>
+<p>Even in e-mail, malware may be carried in encrypted or
+scrambled form,
+or simply as a plain text, using social engineering techniques to
+persuade
+recipient to fetch or activate malware.
+</p>
+<p>It is not possible to prevent user shooting himself in the
+foot, or
+to prevent a dedicated person to transfer malware. There is a tradeoff
+in keeping e-mail useful, and protecting against threats.
+</p>
+<p>The first line of defense (mail content filtering, firewall)
+must be
+complemented by defense mechanisms at the local user's desktop
+computer.
+This includes virus scanners run on PCs, keeping software up-to-date,
+doing backups, and educating users.
+</p>
+<p>Malware does not have to play by the rules. Nothing prevents
+malware
+from generating a syntactically incorrect mail, to send it directly
+to some host ignoring MX and A records, to supply forged SMTP
+information
+or forged mail header, to poison DNS, perhaps even to use forged source
+IP address.
+</p>
+<p>Content filter with virus scanner tries to decide if the mail
+under
+consideration will, or can, cause any bad effects on the recipient
+computer, often without knowing what mail reading software or what
+computer
+is used by recipients. This implies that while some mail may be decoded
+(by adhering to standards) into a harmless text, it might be decoded by
+some broken MUA or archiver into a virus or exploit, or trigger a MUA
+bug
+or vulnerability during decoding, or during displaying a message.
+External
+archivers/unpackers called by <i>sentora-paranoid</i> may
+be
+relatively easy to
+trick into not extracting certain archive members, thus hiding
+malicious code.
+</p>
+<p>Solving this problem would require content filter with virus
+scanner
+to emulate all known (and unknown?!) mail readers in the way they
+respond
+to malformed mail. While <i>sentora-paranoid</i> content
+filters try to
+anticipate some common problems, especially the ones practiced by
+currently
+active viruses, there is no guarantee that this approach is always
+successful.
+</p>
+<p>Even now there are combinations of viruses and virus scanners
+that fail to be detected
+due to a malformed MIME header, which gets decoded differently (and
+correctly,
+considering standards!) by MIME::Parser, yet certain mail readers
+decode
+it differently, forming a virus. It often helps to use more than one
+virus scanner (e.g. <a href="http://www.clamav.net/">clamd</a>
+along with
+some commercial virus scanner).
+</p>
+<p>RFC 2046 defines a way to split sending one document into
+several
+e-mail messages, which can then be reassembled (automatically or
+manually)
+by MUA. The <i>Content-Type</i> value to look for is <i>message/partial</i>
+(and similarly: <i>message/external-body</i>). Checking
+mail fragments
+individually for viruses can not reliably detect viruses, which only
+get
+reassembled into a recognizable form by the recipient's mail reader.
+Most virus scanners at the MTA level (including clamav
+and all
+other variants of amavis-new) check each mail independently from other
+messages,
+so the only protection to this threat is to ban these MIME
+content-types
+(see $banned_filename_re setting in amavisd.conf), or by disabling
+auto-reassembly at mail readers, or running a virus checker tightly
+associated with MUA.
+</p>
+<p>Blocking the MIME content type <i>message/external-body</i>
+may sound useful,
+although the mechanism is not much different from letting user freely
+browse
+the web or fully interpret HTML mail messages, so if the later is
+allowed,
+it probably does not make sense to treat <i>message/external-body</i>
+differently.
+</p>
+<h3><a id="sec-dos" name="sec-dos">Protection
+against denial-of-service
+(DoS) attacks</a></h3>
+<p>Because <i>sentora-paranoid</i> tries to set a
+firewall as efficent as possible, this may be abused by malware or bad
+configurations. The
+so-called
+<i>mail bomb</i>, e.g. 42.zip or bzip2 bomb are examples of
+such malware.
+Such mail message, when fully decoded, can exceed available disk size
+several
+times, or consume a lot of time for decoding. Unless decoding is
+stopped
+at an earlier stage, it could cause the message checking to be retried
+over and over again, each time either hitting the disk full condition,
+or exceeding the allowed time limit. Note that mail bombs are targeting
+mail content filters, and are normally not a threat to mail clients
+(MUA),
+unless they carry a virus as well.
+</p>
+<br />
+<hr />
+<h2>Disclaimer</h2>
+<p>Please, do not install sentora-paranoid in a
+production server if you didn't do all necesary tests to check that it
+is suitable for your needs.<br />
+Be advised, that I didn't take any
+responsability for damage or loss by using this free software. If you
+are running a hosting business please consider to hire a security
+professional, do not blame me if you use this script and not take the
+time to check if all is going as you expected.</p>
+<p></p>
+<hr style="width: 100%; height: 2px;" />Last updated:
+2015-01-20
+</body></html>

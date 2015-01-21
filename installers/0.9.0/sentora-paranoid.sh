@@ -23,7 +23,7 @@
 #  Pascal Peyremorte and others.
 #
 
-SENTORA_PARANOID_VERSION="1.0.0"	# Compatible sentora-install v1.0.0-beta2+
+SENTORA_PARANOID_VERSION="1.0.0"	# Compatible sentora-install v1.0.0-beta2+ to RC1
 
 #====================================================================================
 #--- Display the 'welcome' splash/user warning info..
