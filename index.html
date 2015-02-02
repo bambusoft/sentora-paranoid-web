@@ -10,7 +10,8 @@ body { background: white; color: black }
 kbd { font-family: monospace; background-color: #eeeeee }
 pre.kbd { background-color: #eeeeee }
 img.noboarder { color: white; border: none }
-</style><!-- tt { background-color: #eeffff } --><!-- [link rel="STYLESHEET" href="./a.css" type="text/css"] --></head>
+</style><!-- tt { background-color: #eeffff } --><!-- [link rel="STYLESHEET" href="./a.css" type="text/css"] -->
+</head>
 <body>
 <p>
 [ <a href="./index.html">home site</a> | <a href="#download">download</a> | <a href="#doc">documentation</a>
@@ -83,10 +84,12 @@ project)</li>
 <li>Expand installation script to other OSes</li>
 </ul>
 <h2><a id="new" name="new">News</a></h2>
-<p>2015-01-25: Newest script release <a href="installers/1.0.0-150125">sentora-paranoid-1.0.0-150125</a></p>
+<p>2015-02-02: Newest snapshot release <a href="installers/1.0.0-150202">sentora-paranoid-1.0.0-150202</a></p>
 <p><b>Old News</b></p>
+<p>2015-01-25: Previous development and&nbsp;
+unestable snapshot release <a href="installers/1.0.0-150125">sentora-paranoid-1.0.0-150125</a></p>
 <p>2015-01-13:&nbsp;Previous development and&nbsp;
-unestable release <a href="installers/1.0.0-150113">sentora-paranoid-1.0.0-150113</a></p>
+unestable snapshot release <a href="installers/1.0.0-150113">sentora-paranoid-1.0.0-150113</a></p>
 <p>2014-12-20: First&nbsp;beta code and tests released for a
 very few users<br />
 </p>
@@ -118,7 +121,9 @@ relies on the kind donations from our users!</dt>
 in <a href="http://sentora-paranoid.open-source.tk">Guadalajara,
 Jalisco, México</a>
 (thanks to <a href="http://www.bambusoft.com">Bambusoft</a>):</dt>
-<dd>=&gt;&nbsp;<a href="installers/1.0.0-150125">sentora-paranoid-1.0.0-150125</a>&nbsp;</dd>
+<dd></dd>
+<dd>Current =&gt;&nbsp;<a href="installers/1.0.0-150202">sentora-paranoid-1.0.0-150202</a>
+(snapshot)</dd>
 <dt></dt>
 </dl>
 <h3>Latest development release</h3>
@@ -127,7 +132,7 @@ Please be aware that development snapshots should only be
 used for
 development and testing purposes, they are not recommended for
 production environments!<br />
-<dd>=&gt;&nbsp;<a href="https://github.com/bambusoft/sentora-paranoid">sentora-paranoid-1.0.0</a>
+<dd>Development =&gt;&nbsp;<a href="https://github.com/bambusoft/sentora-paranoid">sentora-paranoid-1.0.0</a>
 at github</dd>
 <dt></dt>
 </dl>
@@ -135,8 +140,10 @@ at github</dd>
 </dl>
 <h3>Most recent versions</h3>
 <dl>
+<dt><a href="installers/1.0.0-150125">sentora-paranoid-1.0.0-150125</a>
+&nbsp;unstable snapshot release</dt>
 <dt><a href="installers/1.0.0-150113">sentora-paranoid-1.0.0-150113</a>
-&nbsp;unstable release</dt>
+&nbsp;unstable snapshot release</dt>
 </dl>
 <p><b>Announcements</b> about new releases, they are
 posted in the sentora-paranid official page and <a href="http://forum.sentora-paranoid.open-source.tk">forum</a><span style="text-decoration: underline;"></span><br />
@@ -309,6 +316,7 @@ most recent version of sentora-paranoid.</p>
 comprise the <i>sentora-paranoid</i>
 documentation.&nbsp;</p>
 <ul>
+<li><a href="docs/1.0.0-150202/sentora-paranoid-1.0.0-150202.pdf">sentora-paranoid-1.0.0-150202</a></li>
 <li><a href="docs/1.0.0-150125/sentora-paranoid-1.0.0-150125.pdf">sentora-paranoid-1.0.0-150125</a></li>
 <li><a href="docs/1.0.0-150113/sentora-paranoid-1.0.0-150113.pdf">sentora-paranoid-1.0.0-150113</a></li>
 </ul>
@@ -336,8 +344,10 @@ security monitoring services please contact <a href="http://www.bambusoft.com">B
 <p>For outsourced hosting support or business expansion to <span style="text-decoration: underline;">spanish</span>
 latinamerica market please contact <a href="http://www.bambusoft.com">Bambusoft Team</a>
 &lt;
-informes (at) bambusoft.com &gt;&nbsp;<br />(North
-America and the Caribbean&nbsp;working hours GMT-06:00) (South America
+informes (at) bambusoft.com &gt;&nbsp;<br />
+(North
+America and the Caribbean&nbsp;working hours GMT-06:00) (South
+America
 market please consider GMT-04:00), there is no 24/7 support
 by now. </p>
 <br />
@@ -425,7 +435,8 @@ and reporting problems</a></h3>
 <li>128MB of memory (512+ recomendded)</li>
 <li>Recent sentora installation</li>
 </ul>
-<li>Use the official sentora-paranoid <a href="http://forum.sentora-paranoid.open-source.tk/">forum</a> to report any
+<li>Use the official sentora-paranoid <a href="http://forum.sentora-paranoid.open-source.tk/">forum</a>
+to report any
 problem with this security script.</li>
 <li>When&nbsp;reporting a problem, please include all
 relevant
@@ -505,10 +516,11 @@ sentora-paranoid:<br />
 <p> or the long way: </p>
 <pre class="kbd"> # su or sudo -i<br /> &gt; wget http://sentora-paranoid.open-source.tk/installers/1.0.0-yymmdd/sentora-paranoid.sh<br /> &gt; chmod u+x sentora-paranoid.sh<br /> &gt; ./sentora-paranoid.sh<br /></pre>
 <p> just replace: <span style="font-style: italic;">yymmdd</span>
-with a valid release number (or use dev-snapshot&nbsp; for current under development snapshot) </p>
+with a valid release number (or use dev-snapshot&nbsp; for current
+under development snapshot) </p>
 </li>
 <li>See comand output and log files:
-<pre>sentora-paranoid version: 1.0.0-dev-snapshot<br />sentora-installer version: 1.0.0-RC2<br />sentora-preconf version: 1.0.0-RC1<br />sentora-core version: 1.0.0-RC1<br /><br />Action requested: install on server: Ubuntu 14.04 32<br />...<br /></pre>
+<pre>sentora-paranoid version: 1.0.0-dev-snapshot<br />sentora-installer version: 1.0.0<br />sentora-preconf version: 1.0.0<br />sentora-core version: 1.0.0<br /><br />Action requested: install on server: Ubuntu 14.04 32<br />...<br /></pre>
 </li>
 </ul>
 <br />
@@ -813,5 +825,5 @@ professional, do not blame me if you use this script and not take the
 time to check if all is going as you expected.</p>
 <p></p>
 <hr style="width: 100%; height: 2px;" />Last updated:
-2015-01-25
+2015-02-02
 </body></html>

@@ -1637,7 +1637,8 @@ if [[ "$REVERT" = "false" ]] ; then
 			echo "sentora-paranoid: why is this Multiple definitions exception ocurring here?"
 			echo "NOTICE: Some profiles are set to complain, you are encouraged to set to enforce when ready"
 			sed -i "s@<Directory /etc/sentora/panel>@<Directory /etc/sentora/panel>\n\tAAHatName sentora@" $PANEL_PATH/configs/apache/httpd.conf
-			sed -i "s@#AAHatName sentora@AAHatName sentora@" $PANEL_PATH/configs/apache/https.conf
+			sed -i "s@#AAHatName sentora@AAHatName sentora@" $SENTORA_PARANOID_CONFIG_PATH/apache2/https.conf
+			cp -v $SENTORA_PARANOID_CONFIG_PATH/apache2/https.conf $PANEL_PATH/configs/apache/https.conf
 			sed -i 's@"  AllowOverride All" . fs_filehandler::NewLine()@"  AllowOverride All" . fs_filehandler::NewLine() . "  AAHatName vhost" . fs_filehandler::NewLine()@' $PANEL_PATH/panel/modules/apache_admin/hooks/OnDaemonRun.hook.php
 			a2enmod mpm_prefork
 			a2enmod apparmor
